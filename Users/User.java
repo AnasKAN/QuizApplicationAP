@@ -1,4 +1,7 @@
-package Pesron;
+package Users;
+
+import java.util.regex.Pattern;
+
 public class User {
     
     enum Role {STUDENT, ADMIN};
@@ -57,7 +60,11 @@ public class User {
         }
     
         public void setEmail(String email) {
-            this.email = email;
+            if (isValidEmail(email)) {
+                this.email = email;
+            } else {
+                throw new IllegalArgumentException("Invalid email address");
+            }
         }
     
         // Getter and Setter for password
@@ -66,7 +73,11 @@ public class User {
         }
     
         public void setPassword(String password) {
-            this.password = password;
+            if (isValidPassword(password)) {
+                this.password = password;
+            } else {
+                throw new IllegalArgumentException("Invalid password");
+            }
         }
     
         // Getter and Setter for personRole
@@ -76,6 +87,18 @@ public class User {
     
         public void setPersonRole(Role personRole) {
             this.personRole = personRole;
+        }
+
+        public boolean isValidEmail(String email)
+        {
+            String regexPattern = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@" 
+            + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
+            return email != null && Pattern.matches(regexPattern, email);
+        }
+
+        public boolean isValidPassword(String password)
+        {
+            return password != null && password.length() >= 8;
         }
 
 }

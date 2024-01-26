@@ -1,12 +1,9 @@
 import java.io.IOException;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class MainScene extends Application{
@@ -20,6 +17,7 @@ public class MainScene extends Application{
     public void start(Stage primaryStage) throws IOException{
         this.primaryStage = primaryStage;
         changeScene("LoginPage.fxml");
+
         primaryStage.setTitle("Quizzy");
         primaryStage.show();
 }

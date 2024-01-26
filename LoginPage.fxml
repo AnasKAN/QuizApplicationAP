@@ -4,7 +4,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="login_container" stylesheets="@../../../Styles/login.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="login_container" stylesheets="@../../../../../../../../src/login.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainScene">
    <VBox prefHeight="400.0" prefWidth="200.0" styleClass="login_logo_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
       <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../../images/QuizzeyLogo.png" />
@@ -16,7 +16,7 @@
       <Label fx:id="label_email" style="-fx-translate-y: 50;" styleClass="label_style" text="Email:" />
       <TextField fx:id="field_email" style="-fx-translate-y: 50;" styleClass="input_field" />
       <Label fx:id="label_pass" style="-fx-translate-y: 85;" styleClass="label_style" text="Password:" />
-      <TextField fx:id="field_pass" style="-fx-translate-y: 85;" styleClass="input_field" />
-      <Button fx:id="btn_login" mnemonicParsing="false" prefHeight="25.0" prefWidth="350.0" style="-fx-translate-y: 140; -fx-font-family: &quot;Comic Sans MS&quot;;" styleClass="login_form_container" text="Login" />
+      <PasswordField fx:id="field_pass" style="-fx-translate-y: 85;" styleClass="input_field" />
+      <Button fx:id="btn_login" mnemonicParsing="false" prefHeight="25.0" prefWidth="350.0" style="-fx-translate-y: 140; -fx-font-family: &quot;Comic Sans MS&quot;;" styleClass="login_form_container" onAction="#btnonclick" text="Login" />
    </VBox>
 </AnchorPane>

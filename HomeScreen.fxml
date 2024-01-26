@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D8CCFB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D8CCFB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
    <children>
       <Pane prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #916CF5;">
          <children>
@@ -18,12 +18,12 @@
                   <Font name="Comic Sans MS" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="userLbl" layoutX="36.0" layoutY="49.0" style="-fx-font-weight: 700; -fx-text-fill: #FFEEB6;" text="userName" wrapText="true">
+            <Label fx:id="userLbl" layoutX="36.0" layoutY="49.0" style="-fx-font-weight: 700; -fx-text-fill: #FFEEB6;" text="None" wrapText="true">
                <font>
                   <Font name="Comic Sans MS" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="homeBtn" alignment="CENTER" depthTest="DISABLE" focusTraversable="false" layoutX="20.0" layoutY="114.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text=" Home" textFill="#916cf5">
+            <Button fx:id="homeBtn" alignment="CENTER" depthTest="DISABLE" focusTraversable="false" layoutX="20.0" layoutY="114.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="false" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text=" Home" textFill="#916cf5">
                <font>
                   <Font size="17.0" />
                </font>
@@ -33,7 +33,7 @@
                   <Image url="@HomeIcon.png" />
                </image>
             </ImageView>
-            <Button fx:id="homeBtn1" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="174.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text="   Quizzes" textFill="#916cf5">
+            <Button fx:id="quizzesbtn" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="174.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="false" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text="   Quizzes" textFill="#916cf5">
                <font>
                   <Font size="17.0" />
                </font>
@@ -43,7 +43,7 @@
                   <Image url="@QuizzesIcon.png" />
                </image>
             </ImageView>
-            <Button fx:id="homeBtn11" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="236.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text="  Grades" textFill="#916cf5">
+            <Button fx:id="gradesbtn" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="236.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="fals" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text="  Grades" textFill="#916cf5">
                <font>
                   <Font size="17.0" />
                </font>
@@ -53,7 +53,7 @@
                   <Image url="@Grades.png" />
                </image>
             </ImageView>
-            <Button fx:id="homeBtn111" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="328.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text="  Logout" textFill="#916cf5">
+            <Button fx:id="logoutbtn" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="328.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="false" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" onAction="#logout" text="  Logout" textFill="#916cf5">
                <font>
                   <Font size="17.0" />
                </font>

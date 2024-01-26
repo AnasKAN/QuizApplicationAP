@@ -11,7 +11,7 @@
       </ImageView>
    </VBox>
    <VBox layoutX="215.0" layoutY="38.0" prefHeight="350.0" prefWidth="350.0" styleClass="login_form_container" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
-      <Label fx:id="label_selector" style="-fx-translate-y: 20;" styleClass="label_style" text="Choose Your Account Type:" />
+      <Label fx:id="f" style="-fx-translate-y: 20;" styleClass="label_style" text="Choose Your Account Type:" />
       <ChoiceBox fx:id="selector_acc" prefHeight="30.0" prefWidth="150.0" style="-fx-translate-y: 20;" styleClass="account_selector" />
       <Label fx:id="label_email" style="-fx-translate-y: 50;" styleClass="label_style" text="Email:" />
       <TextField fx:id="field_email" style="-fx-translate-y: 50;" styleClass="input_field" />

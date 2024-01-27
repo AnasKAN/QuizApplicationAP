@@ -90,14 +90,14 @@ public class User {
         }
 
         //Validation Methods
-        public boolean isValidEmail(String email)
+        public static boolean isValidEmail(String email)
         {
             String regexPattern = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@" 
             + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
             return email != null && Pattern.matches(regexPattern, email);
         }
 
-        public boolean isValidPassword(String password)
+        public static boolean isValidPassword(String password)
         {
             return password != null && password.length() >= 8;
         }

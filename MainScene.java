@@ -5,8 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.sql.*;
 
 public class MainScene extends Application{
+
     public static int condition=0;//to change between windows
     public static boolean open=true;//to make the app open or close
     private Stage primaryStage;
@@ -28,7 +30,6 @@ public class MainScene extends Application{
             pane = FXMLLoader.load(getClass().getResource(fxml));
             primaryStage.setScene(new Scene(pane));
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

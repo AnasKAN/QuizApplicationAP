@@ -22,7 +22,7 @@ public class HomeController{
     }
 
     public void logout(ActionEvent e) throws IOException{
-        System.out.println("hello");
+        System.out.println("Home page to login page (logout method in home controller class)");
         Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
         stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminController">
+   <children>
+      <Label layoutX="457.0" layoutY="116.0" text="result" />
+      <Label fx:id="resultlbl" layoutX="432.0" layoutY="124.0" text=".............................." />
+      <TextField fx:id="addvaluetxtfield" layoutX="77.0" layoutY="120.0" />
+      <Label fx:id="addlbl" layoutX="75.0" layoutY="99.0" text="add teacher or student to db" />
+      <TextField fx:id="querytxtfield" layoutX="77.0" layoutY="214.0" />
+      <Button onAction="#add" fx:id="addbtn" layoutX="133.0" layoutY="151.0" mnemonicParsing="false" text="add" />
+      <Label fx:id="querylbl" layoutX="103.0" layoutY="189.0" text="write your queries" />
+      <Button onAction="#query" fx:id="submitbtn" layoutX="125.0" layoutY="246.0" mnemonicParsing="false" text="submit" />
+      <Button onAction="#logout" fx:id="logoutbtn" layoutX="124.0" layoutY="283.0" mnemonicParsing="false" text="logout" />
+   </children>
+</AnchorPane>

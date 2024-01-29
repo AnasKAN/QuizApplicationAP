@@ -24,7 +24,7 @@
         <TextField fx:id="txtFieldEmail" style="-fx-translate-y: 50;" styleClass="inputField" />
         <Label fx:id="labelPassword" style="-fx-translate-y: 85;" styleClass="labelStyle" text="Password:" />
         <PasswordField fx:id="txtFieldPassword" style="-fx-translate-y: 85;" styleClass="inputField" />
-        <Button fx:id="btnLogin" mnemonicParsing="false" prefHeight="25.0" prefWidth="350.0" style="-fx-translate-y: 140; -fx-font-family: &quot;Comic Sans MS&quot;;" styleClass="loginFormContainer" onAction="#switch2sceneHome" text="Login" />
+        <Button fx:id="btnLogin" mnemonicParsing="false" prefHeight="25.0" prefWidth="350.0" style="-fx-translate-y: 140; -fx-font-family: &quot;Comic Sans MS&quot;;" styleClass="loginFormContainer" onAction="#changeScene" text="Login" />
       <Label fx:id="loginMessage">
          <VBox.margin>
             <Insets top="70.0" />

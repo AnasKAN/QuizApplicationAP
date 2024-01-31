@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D8CCFB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QuizzesController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #916CF5;">
+         <children>
+            <Label fx:id="welcomeLbl" layoutX="14.0" layoutY="14.0" style="-fx-font-weight: 700; -fx-text-fill: #FFEEB6;" text="Welcome">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="userLbl" layoutX="36.0" layoutY="49.0" style="-fx-font-weight: 700; -fx-text-fill: #FFEEB6;" text="None" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="homeBtn" alignment="CENTER" depthTest="DISABLE" focusTraversable="false" layoutX="20.0" layoutY="114.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="false" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text=" Home" textFill="#916cf5">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <ImageView layoutX="26.0" layoutY="122.0">
+               <image>
+                  <Image url="@../HomeIcon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="quizzesbtn" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="174.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="false" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text="   Quizzes" textFill="#916cf5">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <ImageView layoutX="26.0" layoutY="181.0">
+               <image>
+                  <Image url="@../QuizzesIcon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="gradesbtn" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="236.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="fals" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text="  Grades" textFill="#916cf5">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <ImageView layoutX="26.0" layoutY="244.0">
+               <image>
+                  <Image url="@../Grades.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="logoutbtn" alignment="CENTER" focusTraversable="false" layoutX="20.0" layoutY="328.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" mouseTransparent="false" onAction="#logout" pickOnBounds="false" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 6; -fx-background-color: #D8CCFB; -fx-font-weight: 700;" text="  Logout" textFill="#916cf5">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <ImageView layoutX="26.0" layoutY="336.0">
+               <image>
+                  <Image url="@../LogoutIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fill="#916cf5" layoutX="259.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quizzes">
+         <font>
+            <Font name="Comic Sans MS" size="60.0" />
+         </font>
+      </Text>
+      <Line endX="229.0" layoutX="373.0" layoutY="74.0" startX="-213.0" />
+      <Text fill="#916cf5" layoutX="168.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available quizzes">
+         <font>
+            <Font name="Comic Sans MS Bold" size="35.0" />
+         </font>
+      </Text>
+      <Button fx:id="quizBtn1" layoutX="180.0" layoutY="164.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: #916CF5;" text="Quiz_name" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="quizBtn2" layoutX="313.0" layoutY="164.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: #916CF5;" text="Quiz_name" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="quizBtn3" layoutX="447.0" layoutY="164.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: #916CF5;" text="Quiz_name" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text fx:id="text1" fill="#916cf5" layoutX="201.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="subject">
+         <font>
+            <Font name="Comic Sans MS" size="22.0" />
+         </font>
+      </Text>
+      <Text fx:id="text3" fill="#916cf5" layoutX="468.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="subject">
+         <font>
+            <Font name="Comic Sans MS" size="22.0" />
+         </font>
+      </Text>
+      <Text fx:id="text2" fill="#916cf5" layoutX="334.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="subject">
+         <font>
+            <Font name="Comic Sans MS" size="22.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -5,7 +5,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.io.IOException;
 
 import Users.User;
@@ -87,11 +89,58 @@ public class LoginPageController {
 
     private boolean performLogin(Role role, String email, String password) {
         // login logic here with database and regular expressions and return true if successful, false otherwise
+        Boolean test = dbLogin();
+        System.out.println("enter perform login");
+        if(User.isValidEmail(email) && User.isValidPassword(password)){
+            return test;
 
-        return User.isValidEmail(email) && User.isValidPassword(password);
+        }
+        else{
+            return test;
+        }
+
+        
     }
+
+    public boolean dbLogin(){
+        System.out.println("Enter Login");
+        DataBase dbc = new DataBase();
+        Connection connectdb = dbc.getConnection();
+        String email = txtFieldEmail.getText();
+        String password = txtFieldPassword.getText();
+
+        String valid = "select count(1) From students where email ='" +email+ "' AND password ='"+ password+ "'"; 
+        // "select count(1) From students where email = ' "+  email  +"' AND password = ' "+ password +"' ;";
+        try {
+            Statement statement = connectdb.createStatement();
+            ResultSet queryResult = statement.executeQuery(valid);
+
+            while(queryResult.next()){
+                System.out.println(email);
+                System.out.println(password);
+                System.out.println("the query result = "+ queryResult.getInt(1));
+                if(queryResult.getInt(1)==1){
+                    System.out.println("logged in");
+                    return true;
+                }
+                else{
+                    System.out.println("not logged in");
+                    return false;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return false;
+
+    }
+
+
     public void changeScene(ActionEvent e) throws IOException{
+        if (dbLogin()){
         try{
+
             System.out.println("changescene method used in the class login page");
             String username = txtFieldEmail.getText(); //this should change the label to the username or the email the user enter
             username = username.substring(0, username.indexOf('@'));
@@ -143,5 +192,9 @@ public class LoginPageController {
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
+        }
+        else{
+            System.out.println("Error");
+        }
     }
 }

@@ -1,7 +1,5 @@
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 
 public class answerController {
@@ -19,16 +17,7 @@ public class answerController {
     private Button answerBtn4;
 
     @FXML
-    private Button gradesbtn;
-
-    @FXML
     private Button hintBtn;
-
-    @FXML
-    private Button homeBtn;
-
-    @FXML
-    private Button logoutbtn;
 
     @FXML
     private Text qNumber;
@@ -37,20 +26,6 @@ public class answerController {
     private Text question;
 
     @FXML
-    private Button quizzesbtn;
-
-    @FXML
     private Text timerTxt;
-
-    @FXML
-    private Label userLbl;
-
-    @FXML
-    private Label welcomeLbl;
-
-    @FXML
-    void logout(ActionEvent event) {
-
-    }
 
 }
